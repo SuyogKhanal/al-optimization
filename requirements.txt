@@ -1,0 +1,22 @@
+# Core ML Libraries
+torch
+torchvision
+numpy
+scikit-learn
+
+# Data Processing
+pandas
+Pillow
+
+# Visualization
+matplotlib
+seaborn
+
+# Progress Bars and Utilities
+tqdm
+
+# Statistical Analysis
+scipy
+
+# Optional: Development Tools
+jupyter
