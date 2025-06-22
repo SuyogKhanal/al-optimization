@@ -424,7 +424,7 @@ If you use this work in your research, please cite:
 For questions, suggestions, or collaborations:
 
 - **Email**: 8848suyog@gmail.com
-- **LinkedIn**: [Your Profile](https://www.linkedin.com/in/suyogkhanal/)
+- **LinkedIn**: [Suyog Khanal](https://www.linkedin.com/in/suyogkhanal/)
 
 ---
 
