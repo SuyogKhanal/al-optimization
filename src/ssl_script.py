@@ -11,7 +11,7 @@ Mathematical Foundation:
 - Confidence-based Thresholding: Only use high-confidence pseudo-labels
 - Entropy Minimization: Encourage low-entropy predictions on unlabeled data
 
-Author: Research Team
+Author: Suyog Khanal
 Date: 2025
 """
 

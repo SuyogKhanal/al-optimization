@@ -15,7 +15,7 @@ Features:
 - Model interpretability analysis
 - Research-grade metrics and reporting
 
-Author: Research Team
+Author: Suyog Khanal
 Date: 2025
 """
 

@@ -13,7 +13,7 @@ Mathematical Foundation:
 - Margin: Select samples with smallest margin between top-2 predictions
 - Query-by-Committee: Use disagreement between multiple models
 
-Author: Research Team
+Author: Suyog Khanal
 Date: 2025
 """
 

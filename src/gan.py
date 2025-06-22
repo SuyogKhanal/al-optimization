@@ -12,7 +12,7 @@ Mathematical Foundation:
 - WGAN-GP: min_G max_D E[D(x)] - E[D(G(z))] + λ*E[(||∇D(x̂)||₂ - 1)²]
 - Conditional GAN: Generate class-specific samples using label information
 
-Author: Research Team
+Author: Suyog Khanal
 Date: 2025
 """
 

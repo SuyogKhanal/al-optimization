@@ -5,7 +5,7 @@ This module provides comprehensive data preprocessing utilities for comparing
 Semi-Supervised Learning, Active Learning, and GAN-based Data Augmentation
 techniques on the CIFAR-10 dataset.
 
-Author: Research Team
+Author: Suyog Khanal
 Date: 2025
 """
 

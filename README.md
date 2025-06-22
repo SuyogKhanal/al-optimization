@@ -37,39 +37,49 @@ In real-world machine learning applications, obtaining labeled data is often the
 #### Semi-Supervised Learning (FixMatch)
 FixMatch combines consistency regularization with confidence-based pseudo-labeling:
 
-$$\mathcal{L} = \mathcal{L}_s + \lambda_u \mathcal{L}_u$$
+```
+L = L_s + λ_u * L_u
+```
 
 Where:
-- $\mathcal{L}_s = \frac{1}{|\mathcal{B}|} \sum_{b=1}^{|\mathcal{B}|} H(p_b, p_m(y|\alpha(\mathcal{A}(x_b))))$ (supervised loss)
-- $\mathcal{L}_u = \frac{1}{\mu|\mathcal{B}|} \sum_{b=1}^{\mu|\mathcal{B}|} \mathbb{1}(\max(q_b) \geq \tau) H(\hat{q}_b, p_m(y|\mathcal{A}(\mathcal{A}(u_b))))$ (unsupervised loss)
+- **L_s** = `(1/|B|) * Σ H(p_b, p_m(y|α(A(x_b))))` (supervised loss)
+- **L_u** = `(1/μ|B|) * Σ 𝟙(max(q_b) ≥ τ) * H(q̂_b, p_m(y|A(A(u_b))))` (unsupervised loss)
 
 **Key Parameters:**
-- Confidence threshold: $\tau = 0.95$
-- Unsupervised loss weight: $\lambda_u = 1.0$
-- Weak augmentation: $\alpha(x)$ (crop + flip)
-- Strong augmentation: $\mathcal{A}(x)$ (crop + flip + color jitter + affine)
+- Confidence threshold: τ = 0.95
+- Unsupervised loss weight: λ_u = 1.0
+- Weak augmentation: α(x) (crop + flip)
+- Strong augmentation: A(x) (crop + flip + color jitter + affine)
 
 #### Active Learning Query Strategies
 
 **Entropy-based Uncertainty:**
-$$H(p) = -\sum_{i=1}^{C} p_i \log p_i$$
+```
+H(p) = -Σ p_i * log(p_i)
+```
 
 **Margin-based Uncertainty:**
-$$U_{margin}(x) = p_1(x) - p_2(x)$$
+```
+U_margin(x) = p_1(x) - p_2(x)
+```
 
-Where $p_1(x)$ and $p_2(x)$ are the top-2 prediction confidences.
+Where `p_1(x)` and `p_2(x)` are the top-2 prediction confidences.
 
 **Least Confidence:**
-$$U_{LC}(x) = 1 - \max_i p_i(x)$$
+```
+U_LC(x) = 1 - max_i p_i(x)
+```
 
 #### GAN-based Data Augmentation
 
 **DCGAN Objective:**
-$$\min_G \max_D V(D,G) = \mathbb{E}_{x \sim p_{data}(x)}[\log D(x)] + \mathbb{E}_{z \sim p_z(z)}[\log(1-D(G(z)))]$$
+```
+min_G max_D V(D,G) = E[x~p_data(x)][log D(x)] + E[z~p_z(z)][log(1-D(G(z)))]
+```
 
 **Conditional Generation:**
-- Generator: $G(z, y) \rightarrow x$ (latent noise + class label → image)
-- Discriminator: $D(x) \rightarrow (validity, class)$ (image → real/fake + class prediction)
+- **Generator**: `G(z, y) → x` (latent noise + class label → image)
+- **Discriminator**: `D(x) → (validity, class)` (image → real/fake + class prediction)
 
 ### Experimental Setup
 
@@ -95,7 +105,7 @@ efficient-image-classification/
 ├── .gitignore                  # Version control exclusions
 ├── src/                        # Source code implementation
 │   ├── data_preprocessing.py   # CIFAR-10 data loading and splitting
-│   ├── ssl.py                  # FixMatch SSL implementation  
+│   ├── ssl_script.py           # FixMatch SSL implementation  
 │   ├── al.py                   # Active Learning strategies
 │   ├── gan.py                  # DCGAN data augmentation
 │   └── evaluation.py           # Comprehensive evaluation framework
@@ -213,12 +223,12 @@ The GAN exhibited **textbook training behavior**:
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/efficient-image-classification.git
-cd efficient-image-classification
+git clone https://github.com/SuyogKhanal/al-optimization.git
+cd al-optimization
 
 # 2. Create virtual environment
-conda create -n efficient-classification python=3.8
-conda activate efficient-classification
+conda create -n al-optimization python=3.8
+conda activate al-optimization
 
 # 3. Install dependencies
 pip install -r requirements.txt
@@ -227,12 +237,12 @@ pip install -r requirements.txt
 python src/data_preprocessing.py
 
 # 5. Run individual methods
-python src/ssl.py          # Semi-Supervised Learning
-python src/al.py           # Active Learning  
-python src/gan.py          # GAN Data Augmentation
+python src/ssl_script.py        # Semi-Supervised Learning
+python src/al.py               # Active Learning  
+python src/gan.py              # GAN Data Augmentation
 
 # 6. Comprehensive evaluation
-python src/evaluation.py   # Compare all methods
+python src/evaluation.py       # Compare all methods
 ```
 
 ### Hardware Requirements
@@ -389,7 +399,7 @@ If you use this work in your research, please cite:
 ```bibtex
 @article{efficient_image_classification_2025,
   title={Efficient Image Classification: A Comprehensive Study of Data-Efficient Learning Methods},
-  author={Your Name},
+  author={Suyog Khanal},
   journal={Research Repository},
   year={2025},
   note={Comprehensive comparison of SSL, Active Learning, and GAN augmentation}
@@ -430,9 +440,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For questions, suggestions, or collaborations:
 
-- **Email**: your.email@domain.com
-- **GitHub Issues**: [Open an issue](https://github.com/your-username/efficient-image-classification/issues)
-- **Research Gate**: [Your Profile](https://researchgate.net/profile/your-profile)
+- **Email**: 8848suyog@gmail.com
+- **LinkedIn**: [Your Profile](https://www.linkedin.com/in/suyogkhanal/)
 
 ---
 
