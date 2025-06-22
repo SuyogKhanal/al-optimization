@@ -1079,7 +1079,7 @@ def main():
     # 1. Evaluate Baseline
     logger.info("Starting baseline evaluation...")
     train_loader = DataLoader(small_train_subset, batch_size=64, shuffle=True)
-    val_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)  # Using test as val for demo
+    val_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)  # Using test as val just for demo
     
     evaluator.evaluate_baseline(train_loader, val_loader, test_loader, num_epochs=20)
     
@@ -1165,7 +1165,7 @@ def main():
                 original_loader=original_loader,
                 test_loader=test_loader,
                 gan_generator=generator,
-                augmentation_ratios=[0.2],  # Just one small ratio for dummy
+                augmentation_ratios=[0.2],  
                 num_epochs=10
             )
             

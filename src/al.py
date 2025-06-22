@@ -515,9 +515,6 @@ class ActiveLearningTrainer:
                 for idx in selected_indices:
                     current_pool_indices.remove(idx)
                 
-                # Create new labeled loader with updated indices
-                # This would need to be implemented with the dataset
-                # For now, we'll simulate the update
                 
             else:
                 avg_uncertainty = 0.0
