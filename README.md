@@ -99,7 +99,7 @@ min_G max_D V(D,G) = E[x~p_data(x)][log D(x)] + E[z~p_z(z)][log(1-D(G(z)))]
 ## 📁 Repository Structure
 
 ```
-efficient-image-classification/
+al-optimization/
 ├── README.md                    # This comprehensive documentation
 ├── requirements.txt             # Python dependencies
 ├── .gitignore                  # Version control exclusions
