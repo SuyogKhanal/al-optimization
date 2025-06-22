@@ -7,7 +7,7 @@
 
 ## 📚 Abstract
 
-This research presents a comprehensive empirical study comparing four state-of-the-art approaches for reducing labeled data requirements in image classification: **Semi-Supervised Learning (SSL)**, **Active Learning (AL)**, **GAN-based Data Augmentation**, and **Supervised Baseline**. Through extensive experiments on CIFAR-10, we demonstrate that **different methods excel in different scenarios**: SSL achieves the highest data efficiency (50.43 accuracy points per 1000 labeled samples), while traditional supervised learning maintains the highest absolute accuracy (69.74%). Our findings provide practical guidance for selecting optimal learning strategies based on labeling budget and performance requirements.
+This research presents a comprehensive empirical study comparing four state-of-the-art approaches for reducing labeled data requirements in image classification: **Semi-Supervised Learning (SSL)**, **Active Learning (AL)**, **GAN-based Data Augmentation**, and **Supervised Baseline**. Through extensive experiments on CIFAR-10, I demonstrate that **different methods excel in different scenarios**: SSL achieves the highest data efficiency (50.43 accuracy points per 1000 labeled samples), while traditional supervised learning maintains the highest absolute accuracy (69.74%). Our findings provide practical guidance for selecting optimal learning strategies based on labeling budget and performance requirements.
 
 **Key Contributions:**
 - First comprehensive comparison of SSL, AL, and GAN augmentation in a unified experimental framework
@@ -408,24 +408,7 @@ If you use this work in your research, please cite:
 
 ---
 
-## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-**Areas for Contribution:**
-- Additional datasets and domains
-- New semi-supervised learning methods
-- Advanced active learning strategies  
-- GAN architecture improvements
-- Evaluation metric enhancements
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
 
 ## 🙏 Acknowledgments
 
